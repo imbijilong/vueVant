@@ -1,6 +1,8 @@
 const path = require('path')
 const vConsolePlugin = require('vconsole-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
+const autoprefixer = require('autoprefixer')
+const pxotrem = require('postcss-pxtorem')
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
@@ -28,6 +30,9 @@ module.exports = {
 
     },
     chainWebpack: config => {
+        //vue cli3配置px2rem-loader适配
+        // config.module.rule('css').test(/\.css$/).oneOf('vue').resourceQuery(/\?vue/).use('px2rem').loader('px2rem-loader').options({remUnit: 75})
+
         config.resolve.alias
             .set('@', resolve('src'))
         config.plugins.delete("prefetch")
@@ -38,7 +43,7 @@ module.exports = {
             .use('script-ext-html-webpack-plugin', [{
                 inline: /runtime\..*\.js$/
             }])
-            .end()    
+            .end()
         config
             .optimization.splitChunks({
                 chunks: "all",
@@ -65,6 +70,15 @@ module.exports = {
     },
     css: {
         loaderOptions: {
+            postcss:{
+                plugins:[
+                    autoprefixer(),
+                    pxotrem({
+                        rootValue: 37.5,
+                        propList: ['*']
+                    })
+                ]
+            },
             less: {
                 modifyVars: {
                     blue: '#3eaf7c',
