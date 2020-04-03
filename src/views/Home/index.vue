@@ -50,10 +50,10 @@
       <div class="third-div">
         <van-radio-group v-model="radio" direction="horizontal">
           <!-- <div class="h1radio"> -->
-          <van-radio name="1" checked-color="#ffe400">
+          <van-radio name="1" checked-color="#323233">
             <div class="radio-text">1. 家庭户</div>
           </van-radio>
-          <van-radio name="2" checked-color="#ffe400">
+          <van-radio name="2" checked-color="#323233">
             <div class="radio-text">2. 集体户</div>
           </van-radio>
           <!-- </div> -->
@@ -135,29 +135,34 @@
         <van-radio-group v-model="radioh5" direction="horizontal">
           <div class="h5radio">
             <div>
-              <van-radio name="1" checked-color="#ffe400" @click="radioh5Checded(radioh5)">
+              <van-radio name="1" checked-color="#323233" @click="radioh5Checded(radioh5)">
                 <div class="radio-text">1. 普通住房</div>
               </van-radio>
             </div>
             <div>
-              <van-radio name="2" checked-color="#ffe400" @click="radioh5Checded(radioh5)">
+              <van-radio name="2" checked-color="#323233" @click="radioh5Checded(radioh5)">
                 <div class="radio-text">2. 商住公寓</div>
               </van-radio>
             </div>
           </div>
-          <div class="h5radio">
-            <van-radio name="3" checked-color="#ffe400" @click="radioh5Checded(radioh5)">
-              <div class="radio-text">3. 集体住所</div>
-            </van-radio>
-            <van-radio name="4" checked-color="#ffe400" @click="radioh5Checded(radioh5)">
-              <div class="radio-text">4. 其他住所</div>
+          <div class="h5radio3">
+            <van-radio name="3" checked-color="#323233" @click="radioh5Checded(radioh5)">
+              <div class="radio-text">
+                3.
+                <span class="h5radio3Span">集体住所(学生宿舍、职工宿舍、工棚、养老院、福利院、旅馆、宗教机构等)</span>
+              </div>
             </van-radio>
           </div>
           <div class="h5radio">
-            <van-radio name="5" checked-color="#ffe400" @click="radioh5Checded(radioh5)">
+            <van-radio name="4" checked-color="#323233" @click="radioh5Checded(radioh5)">
+              <div class="radio-text">4. 其他住所</div>
+            </van-radio>
+            <van-radio name="5" checked-color="#323233" @click="radioh5Checded(radioh5)">
               <div class="radio-text">5. 非居住房屋</div>
             </van-radio>
-            <van-radio name="6" checked-color="#ffe400" @click="radioh5Checded(radioh5)">
+          </div>
+          <div class="h5radio">
+            <van-radio name="6" checked-color="#323233" @click="radioh5Checded(radioh5)">
               <div class="radio-text">6. 无住房</div>
             </van-radio>
           </div>
@@ -166,7 +171,7 @@
     </div>
     <div v-show="h6h7model">
       <div class="h6">
-        <div class="second-title">H6. 本户2019年11月1日至2020年10月31日期间的死亡人口</div>
+        <div class="second-title">H6. 本户住房建筑面积</div>
         <div class="levelthird-div">
           <div class="levelfill-in">
             <div class="text-info">
@@ -195,6 +200,7 @@
 
     <div class="d1">
       <div class="first-title">二、个人项目</div>
+      <div class="second-title">每个人都填报的项目:</div>
       <div class="second-title">D1. 姓名</div>
       <div class="levelthird-div">
         <div class="levelfill-in">
@@ -206,51 +212,52 @@
         </div>
       </div>
     </div>
+
     <div class="d2">
       <div class="second-title">D2. 与户主关系</div>
       <div class="third-div">
         <van-radio-group v-model="radio2" direction="horizontal">
           <div class="h5radio">
             <div>
-              <van-radio name="0" checked-color="#ffe400">
+              <van-radio name="0" checked-color="#323233">
                 <div class="radio-text">0. 户主</div>
               </van-radio>
             </div>
             <div>
-              <van-radio name="1" checked-color="#ffe400">
+              <van-radio name="1" checked-color="#323233">
                 <div class="radio-text">1. 配偶</div>
               </van-radio>
             </div>
           </div>
           <div class="h5radio">
-            <van-radio name="2" checked-color="#ffe400">
+            <van-radio name="2" checked-color="#323233">
               <div class="radio-text">2. 子女</div>
             </van-radio>
-            <van-radio name="3" checked-color="#ffe400">
+            <van-radio name="3" checked-color="#323233">
               <div class="radio-text">3. 父母</div>
             </van-radio>
           </div>
           <div class="h5radio">
-            <van-radio name="4" checked-color="#ffe400">
+            <van-radio name="4" checked-color="#323233">
               <div class="radio-text">4. 岳父母或公婆</div>
             </van-radio>
-            <van-radio name="5" checked-color="#ffe400">
+            <van-radio name="5" checked-color="#323233">
               <div class="radio-text">5. 祖父母</div>
             </van-radio>
           </div>
           <div class="h5radio">
-            <van-radio name="6" checked-color="#ffe400">
+            <van-radio name="6" checked-color="#323233">
               <div class="radio-text">6. 媳婿</div>
             </van-radio>
-            <van-radio name="7" checked-color="#ffe400">
+            <van-radio name="7" checked-color="#323233">
               <div class="radio-text">7. 孙子女</div>
             </van-radio>
           </div>
           <div class="h5radio">
-            <van-radio name="8" checked-color="#ffe400">
+            <van-radio name="8" checked-color="#323233">
               <div class="radio-text">8. 兄弟姐妹</div>
             </van-radio>
-            <van-radio name="9" checked-color="#ffe400">
+            <van-radio name="9" checked-color="#323233">
               <div class="radio-text">9. 其他</div>
             </van-radio>
           </div>
@@ -275,10 +282,10 @@
       </div>
       <div class="third-div">
         <van-radio-group v-model="radio" direction="horizontal">
-          <van-radio name="1" checked-color="#ffe400">
+          <van-radio name="1" checked-color="#323233">
             <div class="radio-text">1. 男</div>
           </van-radio>
-          <van-radio name="2" checked-color="#ffe400">
+          <van-radio name="2" checked-color="#323233">
             <div class="radio-text">2. 女</div>
           </van-radio>
         </van-radio-group>
@@ -322,22 +329,22 @@
       <div class="third-div">
         <van-radio-group v-model="radio2">
           <div class="d7radio">
-            <van-radio name="0" checked-color="#ffe400">
+            <van-radio name="0" checked-color="#323233">
               <div class="radio-text">1. 本普查小区</div>
             </van-radio>
           </div>
           <div class="d7radio">
-            <van-radio name="1" checked-color="#ffe400">
+            <van-radio name="1" checked-color="#323233">
               <div class="radio-text">2. 本村(居)委会其他普查小区</div>
             </van-radio>
           </div>
           <div class="d7radio">
-            <van-radio name="2" checked-color="#ffe400">
+            <van-radio name="2" checked-color="#323233">
               <div class="radio-text">3. 本乡(镇、街道)其他村(居)委会</div>
             </van-radio>
           </div>
           <div class="d7radio">
-            <van-radio name="3" checked-color="#ffe400">
+            <van-radio name="3" checked-color="#323233">
               <div class="radio-text">4. 本县(市、区)其他乡(镇、街道)</div>
             </van-radio>
           </div>
@@ -370,7 +377,7 @@
             </div>
           </div>
           <div class="d7radio">
-            <van-radio name="6" checked-color="#ffe400">
+            <van-radio name="6" checked-color="#323233">
               <div class="radio-text">6. 港澳台或国外</div>
             </van-radio>
           </div>
@@ -382,17 +389,17 @@
       <div class="third-div">
         <van-radio-group v-model="radiod8">
           <div class="d8radio">
-            <van-radio name="1" checked-color="#ffe400" clickable @click="radiod8Checded(radiod8)">
+            <van-radio name="1" checked-color="#323233" clickable @click="radiod8Checded(radiod8)">
               <div class="radio-text">1. 本村(居)委会</div>
             </van-radio>
           </div>
           <div class="d8radio">
-            <van-radio name="2" checked-color="#ffe400" clickable @click="radiod8Checded(radiod8)">
+            <van-radio name="2" checked-color="#323233" clickable @click="radiod8Checded(radiod8)">
               <div class="radio-text">2. 本乡(镇、街道)其他村(居)委会</div>
             </van-radio>
           </div>
           <div class="d8radio">
-            <van-radio name="3" checked-color="#ffe400" clickable @click="radiod8Checded(radiod8)">
+            <van-radio name="3" checked-color="#323233" clickable @click="radiod8Checded(radiod8)">
               <div class="radio-text">3. 本县(市、区)其他乡(镇、街道)</div>
             </van-radio>
           </div>
@@ -424,7 +431,7 @@
             </div>
           </div>
           <div class="d8radio">
-            <van-radio name="5" checked-color="#ffe400" @click="radiod8Checded(radiod8)">
+            <van-radio name="5" checked-color="#323233" @click="radiod8Checded(radiod8)">
               <div class="radio-text">5. 户口待定</div>
             </van-radio>
           </div>
@@ -438,42 +445,42 @@
           <van-radio-group v-model="radiod9" direction="horizontal">
             <div class="h5radio">
               <div>
-                <van-radio name="1" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+                <van-radio name="1" checked-color="#323233" @click="radiod9Checded(radiod9)">
                   <div class="radio-text">1. 没有离开户口登记地</div>
                 </van-radio>
               </div>
               <div>
-                <van-radio name="2" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+                <van-radio name="2" checked-color="#323233" @click="radiod9Checded(radiod9)">
                   <div class="radio-text">2. 不满半年</div>
                 </van-radio>
               </div>
             </div>
             <div class="h5radio">
-              <van-radio name="3" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+              <van-radio name="3" checked-color="#323233" @click="radiod9Checded(radiod9)">
                 <div class="radio-text">3. 半年以上，不满一年</div>
               </van-radio>
-              <van-radio name="4" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+              <van-radio name="4" checked-color="#323233" @click="radiod9Checded(radiod9)">
                 <div class="radio-text">4. 一年</div>
               </van-radio>
             </div>
             <div class="h5radio">
-              <van-radio name="5" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+              <van-radio name="5" checked-color="#323233" @click="radiod9Checded(radiod9)">
                 <div class="radio-text">5. 二年</div>
               </van-radio>
-              <van-radio name="6" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+              <van-radio name="6" checked-color="#323233" @click="radiod9Checded(radiod9)">
                 <div class="radio-text">6. 三年</div>
               </van-radio>
             </div>
             <div class="h5radio">
-              <van-radio name="7" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+              <van-radio name="7" checked-color="#323233" @click="radiod9Checded(radiod9)">
                 <div class="radio-text">7. 四年</div>
               </van-radio>
-              <van-radio name="8" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+              <van-radio name="8" checked-color="#323233" @click="radiod9Checded(radiod9)">
                 <div class="radio-text">8. 五年</div>
               </van-radio>
             </div>
             <div class="h5radio">
-              <van-radio name="9" checked-color="#ffe400" @click="radiod9Checded(radiod9)">
+              <van-radio name="9" checked-color="#323233" @click="radiod9Checded(radiod9)">
                 <div class="radio-text">9. 六年及以上</div>
               </van-radio>
             </div>
@@ -487,45 +494,45 @@
             <van-radio-group v-model="radioD10" direction="horizontal">
               <div class="h5radio">
                 <div>
-                  <van-radio name="0" checked-color="#ffe400">
+                  <van-radio name="0" checked-color="#323233">
                     <div class="radio-text">0. 工作就业</div>
                   </van-radio>
                 </div>
                 <div>
-                  <van-radio name="1" checked-color="#ffe400">
+                  <van-radio name="1" checked-color="#323233">
                     <div class="radio-text">1. 学习培训</div>
                   </van-radio>
                 </div>
               </div>
               <div class="h5radio">
-                <van-radio name="2" checked-color="#ffe400">
+                <van-radio name="2" checked-color="#323233">
                   <div class="radio-text">2. 随同迁移</div>
                 </van-radio>
-                <van-radio name="3" checked-color="#ffe400">
+                <van-radio name="3" checked-color="#323233">
                   <div class="radio-text">3. 房屋拆迁</div>
                 </van-radio>
               </div>
               <div class="h5radio">
-                <van-radio name="4" checked-color="#ffe400">
+                <van-radio name="4" checked-color="#323233">
                   <div class="radio-text">4. 改善住房</div>
                 </van-radio>
-                <van-radio name="5" checked-color="#ffe400">
+                <van-radio name="5" checked-color="#323233">
                   <div class="radio-text">5. 寄挂户口</div>
                 </van-radio>
               </div>
               <div class="h5radio">
-                <van-radio name="6" checked-color="#ffe400">
+                <van-radio name="6" checked-color="#323233">
                   <div class="radio-text">6. 婚姻嫁娶</div>
                 </van-radio>
-                <van-radio name="7" checked-color="#ffe400">
+                <van-radio name="7" checked-color="#323233">
                   <div class="radio-text">7. 照料孙子女</div>
                 </van-radio>
               </div>
               <div class="h5radio">
-                <van-radio name="8" checked-color="#ffe400">
+                <van-radio name="8" checked-color="#323233">
                   <div class="radio-text">8. 为子女就学</div>
                 </van-radio>
-                <van-radio name="9" checked-color="#ffe400">
+                <van-radio name="9" checked-color="#323233">
                   <div class="radio-text">9. 其他</div>
                 </van-radio>
               </div>
@@ -536,16 +543,16 @@
     </div>
 
     <div class="d11">
-      <div class="second-title">6周岁及以上（2014年10月31日以前出生）的人填报的项目:</div>
+      <div class="second-title">6周岁及以上(2014年10月31日以前出生)的人填报的项目:</div>
       <div class="second-title">
         <span class="title">D11.</span> 是否识字
       </div>
       <div class="third-div">
         <van-radio-group v-model="radio" direction="horizontal">
-          <van-radio name="1" checked-color="#ffe400">
+          <van-radio name="1" checked-color="#323233">
             <div class="radio-text">1. 是</div>
           </van-radio>
-          <van-radio name="2" checked-color="#ffe400">
+          <van-radio name="2" checked-color="#323233">
             <div class="radio-text">2. 否</div>
           </van-radio>
         </van-radio-group>
@@ -557,34 +564,34 @@
         <van-radio-group v-model="radioD12" direction="horizontal">
           <div class="h5radio">
             <div>
-              <van-radio name="0" checked-color="#ffe400">
+              <van-radio name="0" checked-color="#323233">
                 <div class="radio-text">1. 未上过学</div>
               </van-radio>
             </div>
             <div>
-              <van-radio name="1" checked-color="#ffe400">
+              <van-radio name="1" checked-color="#323233">
                 <div class="radio-text">2. 小学</div>
               </van-radio>
             </div>
           </div>
           <div class="h5radio">
-            <van-radio name="2" checked-color="#ffe400">
+            <van-radio name="2" checked-color="#323233">
               <div class="radio-text">3. 初中</div>
             </van-radio>
-            <van-radio name="3" checked-color="#ffe400">
+            <van-radio name="3" checked-color="#323233">
               <div class="radio-text">4. 高中</div>
             </van-radio>
           </div>
           <div class="h5radio">
-            <van-radio name="4" checked-color="#ffe400">
+            <van-radio name="4" checked-color="#323233">
               <div class="radio-text">5. 大学专科</div>
             </van-radio>
-            <van-radio name="5" checked-color="#ffe400">
+            <van-radio name="5" checked-color="#323233">
               <div class="radio-text">6. 大学本科</div>
             </van-radio>
           </div>
           <div class="h5radio">
-            <van-radio name="6" checked-color="#ffe400">
+            <van-radio name="6" checked-color="#323233">
               <div class="radio-text">7. 研究生</div>
             </van-radio>
           </div>
@@ -700,7 +707,7 @@ export default {
     box-sizing: border-box;
   }
 }
-
+//带有输入框的信息竖向显示
 .third-div {
   margin: 10px 0px 0px 20px;
   display: flex;
@@ -721,10 +728,10 @@ export default {
   }
   //输入框字体大小
   /deep/ .van-field__control {
-    font-size: 10px;
+    font-size: 7px;
   }
 }
-
+//带有输入框的信息水平显示
 .levelthird-div {
   margin: 10px 0px 0px 20px;
   display: flex;
@@ -746,10 +753,10 @@ export default {
   }
   //输入框字体大小
   /deep/ .van-field__control {
-    font-size: 10px;
+    font-size: 7px;
   }
 }
-
+//地址信息栏
 .addressTitle {
   .third-div {
     margin: 10px 0px 10px 10px;
@@ -764,7 +771,7 @@ export default {
     //输入框样式
     /deep/ .van-cell {
       padding: 0;
-      width: 67px;
+      width: 65px;
       height: 13px;
       line-height: 6px;
       background: #f0f0f0;
@@ -772,25 +779,27 @@ export default {
     }
     //输入框字体大小
     /deep/ .van-field__control {
-      font-size: 10px;
+      font-size: 7px;
     }
   }
 }
-
+//所有radio前面圈的样式
+/deep/ .van-radio__icon .van-icon {
+  display: block;
+  // box-sizing: border-box;
+  width: 5px;
+  height: 5px;
+  color: transparent;
+  font-size: 0.8em;
+  line-height: 5px;
+  text-align: inherit;
+  border: 1px solid #323233;
+  margin: 9px 0 0 5px;
+  border-color: #323233;
+}
 .h1 {
   margin-left: 10px;
   height: 100px;
-  // /deep/ .van-radio__icon .van-icon {
-  //   display: block;
-  //   box-sizing: border-box;
-  //   width: 15px;
-  //   height: 15px;
-  //   color: transparent;
-  //   font-size: 0.8em;
-  //   line-height: 6px;
-  //   text-align: inherit;
-  //   border: 0.02667rem solid #111;
-  // }
 }
 .h2 {
   margin-left: 10px;
@@ -805,15 +814,28 @@ export default {
 }
 .h5 {
   margin-left: 10px;
-  height: 130px;
+  height: 150px;
   .h5radio {
     display: flex;
     margin-bottom: 10px;
   }
+  .h5radio3 {
+    white-space: nowrap;
+    margin-bottom: 10px;
+    .van-radio {
+      height: 20px;
+      width: 312px;
+      border-radius: 3px;
+    }
+    .h5radio3Span {
+      font-size: 7px;
+      white-space: nowrap;
+    }
+  }
 }
 .d1 {
   margin: 0 0 0 10px;
-  height: 70px;
+  height: 100px;
 }
 .d2,
 .d9,
@@ -847,7 +869,7 @@ export default {
     }
     //输入框字体大小
     /deep/ .van-field__control {
-      font-size: 10px;
+      font-size: 7px;
     }
   }
 }
@@ -877,7 +899,7 @@ export default {
     }
     //输入框字体大小
     /deep/ .van-field__control {
-      font-size: 10px;
+      font-size: 7px;
     }
   }
 }
@@ -903,7 +925,7 @@ export default {
     }
     //输入框字体大小
     /deep/ .van-field__control {
-      font-size: 10px;
+      font-size: 7px;
     }
   }
 }
@@ -914,11 +936,8 @@ export default {
     margin-top: 10px;
   }
   .radioFive {
-    font-size: 12px;
-    margin: 10px 0 0 28px;
-  }
-  .fill-in {
-    margin-left: 20px;
+    font-size: 7px;
+    margin-top: 10px;
   }
   .van-radio {
     height: 20px;
@@ -933,11 +952,8 @@ export default {
     margin-top: 10px;
   }
   .radioFive {
-    font-size: 12px;
-    margin: 10px 0 0 28px;
-  }
-  .fill-in {
-    margin-left: 20px;
+    font-size: 7px;
+    margin-top: 10px;
   }
   .van-radio {
     height: 20px;
@@ -946,6 +962,8 @@ export default {
   }
 }
 .d11 {
+  margin: 20px 0 0 0px;
+  height: 70px;
   .second-title {
     margin-left: 10px;
   }

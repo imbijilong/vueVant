@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router/index'
 import store from './store'
 import 'amfe-flexible'//rem适配
-import './utils/allcss.css'//设置全局的样式
+import './utils/allcss.less'//设置全局的样式
 // 解决移动端点击延迟300毫秒
 FastClick.attach(document.body)
 
